@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        TextView entrar = findViewById(R.id.textView7);
+        TextView entrar = findViewById(R.id.textView9);
         entrar.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, lista_voluntarios.class);
             startActivity(intent);

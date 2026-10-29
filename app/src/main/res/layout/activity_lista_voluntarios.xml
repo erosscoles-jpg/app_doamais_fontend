@@ -9,15 +9,16 @@
     tools:context=".lista_voluntarios">
 
     <!-- Botão Voltar -->
+
     <Button
         android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/backgroudColor"
         android:drawableLeft="@drawable/outline_arrow_left_alt_24"
         android:text="Voltar"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,6 +27,7 @@
         android:id="@+id/scrollIndicadores"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/caixas_info"
         android:fillViewport="false"
         android:padding="10dp"
         android:scrollbars="none"
@@ -170,14 +172,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.10123119" />
+        app:layout_constraintGuide_percent="0.09" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.28" />
+        app:layout_constraintGuide_percent="0.26" />
 
     <!-- Campo de busca -->
     <EditText
@@ -207,6 +209,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="@drawable/caixas_info"
         android:fillViewport="false"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
@@ -233,7 +236,7 @@
                 android:minWidth="0dp"
                 android:text="Total"
                 android:textColor="@color/total"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <!-- Botão Aptos -->
@@ -246,7 +249,7 @@
                 android:minWidth="0dp"
                 android:text="Aptos"
                 android:textColor="@color/aprovados"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <!-- Botão Pendentes -->
@@ -259,7 +262,7 @@
                 android:minWidth="0dp"
                 android:text="Pendentes"
                 android:textColor="@color/pendente"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <!-- Botão Em análise -->
@@ -272,7 +275,7 @@
                 android:minWidth="0dp"
                 android:text="Em análise"
                 android:textColor="@color/emAnalise"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <!-- Botão Inaptos -->
@@ -285,7 +288,7 @@
                 android:minWidth="0dp"
                 android:text="Inaptos"
                 android:textColor="@color/rejeitados"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -298,5 +301,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.43" />
+
+    <ScrollView
+        android:id="@+id/scrollVoluntarios"
+        android:layout_width="400dp"
+        android:layout_height="380dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7">
+
+        <LinearLayout
+            android:id="@+id/containerVoluntarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
