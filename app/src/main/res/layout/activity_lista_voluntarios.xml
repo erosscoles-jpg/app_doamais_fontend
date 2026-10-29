@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroudColor"
+    tools:context=".lista_voluntarios">
+
+    <!-- Botão Voltar -->
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/backgroudColor"
+        android:drawableLeft="@drawable/outline_arrow_left_alt_24"
+        android:text="Voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Indicadores com rolagem horizontal -->
+    <HorizontalScrollView
+        android:id="@+id/scrollIndicadores"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        android:padding="10dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/guideline10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline9">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Total -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/txtNumeroTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200"
+                    android:textAlignment="center"
+                    android:textColor="@color/total"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDescricaoTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textAlignment="center"
+                    android:textColor="@color/total"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Aptos -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/txtNumeroAptos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="72"
+                    android:textAlignment="center"
+                    android:textColor="@color/aprovados"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDescricaoAptos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aptos"
+                    android:textAlignment="center"
+                    android:textColor="@color/aprovados"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Pendentes -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/txtNumeroPendente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="52"
+                    android:textAlignment="center"
+                    android:textColor="@color/pendente"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDescricaoPendente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pendente"
+                    android:textAlignment="center"
+                    android:textColor="@color/pendente"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Inaptos -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/txtNumeroInapto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:textAlignment="center"
+                    android:textColor="@color/rejeitados"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDescricaoInapto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inapto"
+                    android:textAlignment="center"
+                    android:textColor="@color/rejeitados"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- Guia para posicionamento dos indicadores -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10123119" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <!-- Campo de busca -->
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/fuction_style"
+        android:drawableLeft="@drawable/outline_category_search_24"
+        android:ems="10"
+        android:hint="Buscar voluntário"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/guideline10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botões de filtro com rolagem horizontal -->
+    <HorizontalScrollView
+        android:id="@+id/scrollFiltros"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fillViewport="false"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextText">
+
+        <LinearLayout
+            android:id="@+id/containerFiltros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Botão Total -->
+            <Button
+                android:id="@+id/btnFiltroTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/backgroudColor"
+                android:minWidth="0dp"
+                android:text="Total"
+                android:textColor="@color/total"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Botão Aptos -->
+            <Button
+                android:id="@+id/btnFiltroAptos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/backgroudColor"
+                android:minWidth="0dp"
+                android:text="Aptos"
+                android:textColor="@color/aprovados"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Botão Pendentes -->
+            <Button
+                android:id="@+id/btnFiltroPendentes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/backgroudColor"
+                android:minWidth="0dp"
+                android:text="Pendentes"
+                android:textColor="@color/pendente"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Botão Em análise -->
+            <Button
+                android:id="@+id/btnFiltroAnalise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/backgroudColor"
+                android:minWidth="0dp"
+                android:text="Em análise"
+                android:textColor="@color/emAnalise"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Botão Inaptos -->
+            <Button
+                android:id="@+id/btnFiltroInaptos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/backgroudColor"
+                android:minWidth="0dp"
+                android:text="Inaptos"
+                android:textColor="@color/rejeitados"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- Guia para posicionamento dos filtros -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+</androidx.constraintlayout.widget.ConstraintLayout>

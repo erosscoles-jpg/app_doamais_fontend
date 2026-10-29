@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView entrar = findViewById(R.id.textView7);
         entrar.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, meuPerfil.class);
+            Intent intent = new Intent(MainActivity.this, lista_voluntarios.class);
             startActivity(intent);
         });
 

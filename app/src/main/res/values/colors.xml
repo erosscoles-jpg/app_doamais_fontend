@@ -3,4 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color  name="backgroudColor">#BA2634</color>
+    <color name="pendente">#F1C40F</color>
+    <color name="total">#3498DB</color>
+    <color name="aprovados">#27AE60</color>
+    <color name="rejeitados">#8B1A2B</color>
+    <color name="emAnalise">#9B59B6</color>
 </resources>
