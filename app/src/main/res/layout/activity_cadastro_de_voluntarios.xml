@@ -208,13 +208,15 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- HISTÓRICO DE DOAÇÃO -->
+            <!-- REAÇÃO À DOAÇÃO -->
+
+            <!-- STATUS E OBSERVAÇÕES -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
                 android:layout_marginBottom="12dp"
-                android:text="Histórico de doação"
+                android:text="Status e Observações"
                 android:textColor="@color/white"
                 android:textSize="19sp"
                 android:textStyle="bold" />
@@ -222,126 +224,46 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Você já doou sangue anteriormente?"
+                android:text="Status do Voluntário"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
-            <RadioGroup
-                android:id="@+id/rgDoacaoAnterior"
+            <Spinner
+                android:id="@+id/spStatusVoluntario"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/caixas_info"
+                android:paddingStart="8dp" />
 
-                <RadioButton
-                    android:id="@+id/rbDoacaoSim"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sim"
-                    android:textColor="@color/white" />
-
-                <RadioButton
-                    android:id="@+id/rbDoacaoNao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Não"
-                    android:textColor="@color/white" />
-
-            </RadioGroup>
-
-            <!-- ÚLTIMA DOAÇÃO -->
-            <LinearLayout
-                android:id="@+id/areaUltimaDoacao"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Quando foi sua última doação?"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-                <Button
-                    android:id="@+id/btnDataUltimaDoacao"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="6dp"
-                    android:backgroundTint="@color/backgroudColor"
-                    android:text="Selecionar data"
-                    android:textColor="@color/white" />
-
-            </LinearLayout>
-
-            <!-- REAÇÃO À DOAÇÃO -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Você já teve alguma reação durante ou após uma doação?"
+                android:layout_marginTop="16dp"
+                android:text="Observações adicionais"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
 
-            <RadioGroup
-                android:id="@+id/rgReacaoDoacao"
+            <EditText
+                android:id="@+id/etObservacoes"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rbReacaoSim"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sim"
-                    android:textColor="@color/white" />
-
-                <RadioButton
-                    android:id="@+id/rbReacaoNao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Não"
-                    android:textColor="@color/white" />
-
-            </RadioGroup>
-
-            <!-- RESPONSÁVEL -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Possui um responsável presente?"
+                android:layout_height="100dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/caixas_info"
+                android:gravity="top|start"
+                android:hint="Digite observações importantes..."
+                android:inputType="textMultiLine"
+                android:padding="12dp"
                 android:textColor="@color/white"
-                android:textSize="15sp" />
-
-            <RadioGroup
-                android:id="@+id/rgResponsavel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/rbResponsavelSim"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sim"
-                    android:textColor="@color/white" />
-
-                <RadioButton
-                    android:id="@+id/rbResponsavelNao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Não"
-                    android:textColor="@color/white" />
-
-            </RadioGroup>
+                android:textColorHint="#AAAAAA" />
 
             <!-- QUESTIONÁRIO -->
             <Button
                 android:id="@+id/button12"
                 android:layout_width="350dp"
                 android:layout_height="65dp"
-                android:layout_marginTop="24dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="28dp"
                 android:backgroundTint="@color/white"
                 android:text="Preencher Questionario"
                 android:textColor="@color/black"
