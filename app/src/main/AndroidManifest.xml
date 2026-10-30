@@ -37,6 +37,10 @@
             android:name=".lista_voluntarios"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".cadastroDeVoluntarios"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

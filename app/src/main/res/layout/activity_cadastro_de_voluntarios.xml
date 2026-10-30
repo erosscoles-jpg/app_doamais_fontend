@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroudColor"
+    tools:context=".cadastroDeVoluntarios">
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/backgroudColor"
+        android:drawableLeft="@drawable/outline_arrow_left_alt_24"
+        android:text="Voltar"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Cadastrar Voluntários"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button11" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:fillViewport="false"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/textView41"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="24dp">
+
+            <!-- DADOS PESSOAIS -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dados pessoais"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome completo"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editTextText2"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/caixas_info"
+                android:hint="Digite seu nome completo"
+                android:inputType="textCapWords"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="#AAAAAA" />
+
+            <!-- IDADE E TIPO SANGUÍNEO -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Idade"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/editTextNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/caixas_info"
+                        android:hint="Idade"
+                        android:inputType="number"
+                        android:paddingStart="12dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="#AAAAAA" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo sanguíneo"
+                        android:textColor="@color/white" />
+
+                    <Spinner
+                        android:id="@+id/spTipoSanguineo"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/caixas_info"
+                        android:paddingStart="8dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- PESO E ALTURA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peso (kg)"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/editTextNumber2"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/caixas_info"
+                        android:hint="Ex.: 70"
+                        android:inputType="numberDecimal"
+                        android:paddingStart="12dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="#AAAAAA" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="16dp"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Altura (cm)"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/editTextNumber3"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/caixas_info"
+                        android:hint="Ex.: 175"
+                        android:inputType="number"
+                        android:paddingStart="12dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="#AAAAAA" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- HISTÓRICO DE DOAÇÃO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="12dp"
+                android:text="Histórico de doação"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Você já doou sangue anteriormente?"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <RadioGroup
+                android:id="@+id/rgDoacaoAnterior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbDoacaoSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/rbDoacaoNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textColor="@color/white" />
+
+            </RadioGroup>
+
+            <!-- ÚLTIMA DOAÇÃO -->
+            <LinearLayout
+                android:id="@+id/areaUltimaDoacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quando foi sua última doação?"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnDataUltimaDoacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp"
+                    android:backgroundTint="@color/backgroudColor"
+                    android:text="Selecionar data"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <!-- REAÇÃO À DOAÇÃO -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Você já teve alguma reação durante ou após uma doação?"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <RadioGroup
+                android:id="@+id/rgReacaoDoacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbReacaoSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/rbReacaoNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textColor="@color/white" />
+
+            </RadioGroup>
+
+            <!-- RESPONSÁVEL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Possui um responsável presente?"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <RadioGroup
+                android:id="@+id/rgResponsavel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbResponsavelSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sim"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/rbResponsavelNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Não"
+                    android:textColor="@color/white" />
+
+            </RadioGroup>
+
+            <!-- QUESTIONÁRIO -->
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="350dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/white"
+                android:text="Preencher Questionario"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
