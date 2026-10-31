@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
         TextView entrar = findViewById(R.id.textView9);
         entrar.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, cadastroDeVoluntarios.class);
+            Intent intent = new Intent(MainActivity.this, dashboradFuncionario.class);
             startActivity(intent);
         });
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.btn_cadastrar), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;

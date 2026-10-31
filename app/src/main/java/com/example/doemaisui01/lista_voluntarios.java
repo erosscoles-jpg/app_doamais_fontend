@@ -1,9 +1,11 @@
 package com.example.doemaisui01;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,6 +21,7 @@ import java.util.List;
 public class lista_voluntarios extends AppCompatActivity {
 
     private LinearLayout containerVoluntarios;
+    Button btnVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,14 @@ public class lista_voluntarios extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_lista_voluntarios);
 
-        View main = findViewById(R.id.main);
+        View main = findViewById(R.id.btn_cadastrar);
+
+        btnVoltar = findViewById(R.id.button10);
+
+        btnVoltar.setOnClickListener(v -> {
+            Intent intent = new Intent(lista_voluntarios.this, dashboradFuncionario.class);
+            startActivity(intent);
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(main, (v, insets) -> {
             Insets systemBars = insets.getInsets(

@@ -1,9 +1,9 @@
 package com.example.doemaisui01;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
@@ -15,7 +15,7 @@ public class cadastroDeVoluntarios extends AppCompatActivity {
     EditText nome, idade, peso, altura, observacoes;
     Spinner tipoSanguineo, statusVoluntario;
 
-    Button btnPreencherQuestionario;
+    Button btnPreencherQuestionario, btnVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,12 @@ public class cadastroDeVoluntarios extends AppCompatActivity {
         peso = findViewById(R.id.editTextNumber2);
         altura = findViewById(R.id.editTextNumber3);
         observacoes = findViewById(R.id.etObservacoes);
+        btnVoltar = findViewById(R.id.button11);
+
+        btnVoltar.setOnClickListener(v -> {
+            Intent intent = new Intent(cadastroDeVoluntarios.this, dashboradFuncionario.class);
+            startActivity(intent);
+        });
 
         // Spinner - Tipo Sanguíneo
         tipoSanguineo = findViewById(R.id.spTipoSanguineo);
@@ -109,5 +115,6 @@ public class cadastroDeVoluntarios extends AppCompatActivity {
         Toast.makeText(this,
                 "Cadastro realizado com sucesso! Status: " + status,
                 Toast.LENGTH_LONG).show();
+
     }
 }

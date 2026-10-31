@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroudColor"
@@ -22,7 +21,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
@@ -37,7 +36,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_escaner"
         android:layout_width="300dp"
         android:layout_height="65dp"
         android:layout_marginTop="24dp"
@@ -55,7 +54,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btn_info"
         android:layout_width="300dp"
         android:layout_height="65dp"
         android:layout_marginBottom="24dp"
@@ -87,7 +86,7 @@
         app:layout_constraintGuide_percent="0.35" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_lista"
         android:layout_width="125dp"
         android:layout_height="200dp"
         android:layout_marginTop="32dp"
@@ -100,13 +99,13 @@
         android:textSize="19sp"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cadastrar"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_cadastrar"
         android:layout_width="125dp"
         android:layout_height="200dp"
         android:backgroundTint="@color/white"
@@ -116,11 +115,11 @@
         android:textColor="@color/black"
         android:textSize="19sp"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button3"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_lista"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="@+id/button3" />
+        app:layout_constraintStart_toEndOf="@+id/btn_lista"
+        app:layout_constraintTop_toTopOf="@+id/btn_lista" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
