@@ -15,14 +15,16 @@
         android:textColor="#FFFFFF"
         android:textSize="34dp"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="420dp"
         android:layout_height="103dp"
         android:background="#FE5050"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
     </LinearLayout>
 
@@ -58,7 +60,8 @@
         android:layout_width="409dp"
         android:layout_height="786dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="104dp">
+        tools:layout_editor_absoluteY="104dp"
+        tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
             android:layout_width="305dp"
@@ -66,7 +69,8 @@
             app:cardBackgroundColor="#63000000"
             app:cardCornerRadius="20dp"
             tools:layout_editor_absoluteX="52dp"
-            tools:layout_editor_absoluteY="37dp">
+            tools:layout_editor_absoluteY="37dp"
+            tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -113,7 +117,8 @@
             app:cardBackgroundColor="#63000000"
             app:cardCornerRadius="20dp"
             tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="276dp">
+            tools:layout_editor_absoluteY="276dp"
+            tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -269,7 +274,8 @@
             app:cardBackgroundColor="#63000000"
             app:cardCornerRadius="20dp"
             tools:layout_editor_absoluteX="17dp"
-            tools:layout_editor_absoluteY="531dp" >
+            tools:layout_editor_absoluteY="531dp"
+            tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -302,7 +308,7 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     app:srcCompat="@drawable/ic_launcher_background"
-                    tools:ignore="MissingConstraints"
+                    tools:ignore="DuplicateIds,MissingConstraints"
                     tools:layout_editor_absoluteX="16dp"
                     tools:layout_editor_absoluteY="4dp" />
 
@@ -315,7 +321,8 @@
             app:cardBackgroundColor="#63000000"
             app:cardCornerRadius="20dp"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="626dp">
+            tools:layout_editor_absoluteY="626dp"
+            tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -330,7 +337,7 @@
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         app:srcCompat="@drawable/ic_launcher_background"
-                        tools:ignore="MissingConstraints"
+                        tools:ignore="DuplicateIds,MissingConstraints"
                         tools:layout_editor_absoluteX="16dp"
                         tools:layout_editor_absoluteY="4dp" />
 
@@ -376,7 +383,8 @@
             app:cardBackgroundColor="#63000000"
             app:cardCornerRadius="20dp"
             tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="714dp" >
+            tools:layout_editor_absoluteY="714dp"
+            tools:ignore="MissingConstraints">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
