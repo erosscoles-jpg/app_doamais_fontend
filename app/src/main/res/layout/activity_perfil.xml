@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".perfil">
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="199dp"
+        android:layout_height="76dp"
+        android:text="Campanha de natal"
+        android:textColor="#FFFFFF"
+        android:textSize="34dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="420dp"
+        android:layout_height="103dp"
+        android:background="#FE5050"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/ic_launcher_background"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="236dp"
+        android:layout_height="45dp"
+        android:text="Voltar"
+        android:textSize="34sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="409dp"
+        android:layout_height="786dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="104dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="305dp"
+            android:layout_height="234dp"
+            app:cardBackgroundColor="#63000000"
+            app:cardCornerRadius="20dp"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="37dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="120dp"
+                    android:layout_height="121dp"
+                    app:srcCompat="@drawable/ic_launcher_background"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="92dp"
+                    tools:layout_editor_absoluteY="57dp" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="134dp"
+                    android:layout_height="43dp"
+                    android:text="Meu perfil"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="85dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="160dp"
+                    android:layout_height="46dp"
+                    android:text="Yuri Gagarin"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="72dp"
+                    tools:layout_editor_absoluteY="178dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="366dp"
+            android:layout_height="240dp"
+            app:cardBackgroundColor="#63000000"
+            app:cardCornerRadius="20dp"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="276dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="370dp"
+                    android:layout_height="241dp">
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="197dp"
+                        android:layout_height="38dp"
+                        android:text="Nome Copmpleto"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="1dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="348dp"
+                        android:layout_height="43dp"
+                        app:cardBackgroundColor="#7CE7DEDE"
+                        app:cardCornerRadius="20dp"
+                        tools:layout_editor_absoluteX="6dp"
+                        tools:layout_editor_absoluteY="36dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView37"
+                                android:layout_width="197dp"
+                                android:layout_height="38dp"
+                                android:text="Yuri Gagarin"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24sp"
+                                tools:ignore="MissingConstraints"
+                                tools:layout_editor_absoluteX="51dp"
+                                tools:layout_editor_absoluteY="2dp" />
+
+                            <ImageView
+                                android:id="@+id/imageView19"
+                                android:layout_width="31dp"
+                                android:layout_height="53dp"
+                                app:srcCompat="@drawable/ic_launcher_background"
+                                tools:ignore="MissingConstraints"
+                                tools:layout_editor_absoluteX="7dp"
+                                tools:layout_editor_absoluteY="-5dp" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="348dp"
+                        android:layout_height="43dp"
+                        app:cardBackgroundColor="#7EE7DEDE"
+                        app:cardCornerRadius="20dp"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="109dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView20"
+                                android:layout_width="31dp"
+                                android:layout_height="53dp"
+                                app:srcCompat="@drawable/ic_launcher_background"
+                                tools:ignore="MissingConstraints"
+                                tools:layout_editor_absoluteX="7dp"
+                                tools:layout_editor_absoluteY="-5dp" />
+
+                            <TextView
+                                android:id="@+id/textView38"
+                                android:layout_width="352dp"
+                                android:layout_height="51dp"
+                                android:text="Yurigagarin1934OGASMAIL.COM"
+                                android:textColor="#FFFFFF"
+                                android:textSize="20sp"
+                                tools:ignore="MissingConstraints"
+                                tools:layout_editor_absoluteX="35dp"
+                                tools:layout_editor_absoluteY="16dp" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="348dp"
+                        android:layout_height="43dp"
+                        app:cardBackgroundColor="#7EE7DEDE"
+                        app:cardCornerRadius="20dp"
+                        tools:layout_editor_absoluteX="9dp"
+                        tools:layout_editor_absoluteY="186dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/imageView21"
+                                android:layout_width="31dp"
+                                android:layout_height="53dp"
+                                app:srcCompat="@drawable/ic_launcher_background"
+                                tools:ignore="MissingConstraints"
+                                tools:layout_editor_absoluteX="7dp"
+                                tools:layout_editor_absoluteY="-5dp" />
+
+                            <TextView
+                                android:id="@+id/textView39"
+                                android:layout_width="197dp"
+                                android:layout_height="38dp"
+                                android:text="8 812 234-54-78"
+                                android:textColor="#FFFFFF"
+                                android:textSize="24sp"
+                                tools:ignore="MissingConstraints"
+                                tools:layout_editor_absoluteX="45dp"
+                                tools:layout_editor_absoluteY="2dp" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="197dp"
+                        android:layout_height="38dp"
+                        android:text="E-mail"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="79dp" />
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="197dp"
+                        android:layout_height="38dp"
+                        android:text="Telefone"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="152dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="374dp"
+            android:layout_height="78dp"
+            app:cardBackgroundColor="#63000000"
+            app:cardCornerRadius="20dp"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="531dp" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="143dp"
+                    android:layout_height="37dp"
+                    android:text="Meud Dados"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="3dp" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="278dp"
+                    android:layout_height="41dp"
+                    android:text="Dados para a doação QRCODE"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="88dp"
+                    tools:layout_editor_absoluteY="39dp" />
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:srcCompat="@drawable/ic_launcher_background"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="4dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="374dp"
+            android:layout_height="78dp"
+            app:cardBackgroundColor="#63000000"
+            app:cardCornerRadius="20dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="626dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView22"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:srcCompat="@drawable/ic_launcher_background"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="4dp" />
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="143dp"
+                        android:layout_height="37dp"
+                        android:text="Notificaçoes"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="91dp"
+                        tools:layout_editor_absoluteY="2dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:srcCompat="@drawable/ic_launcher_background"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="4dp" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="278dp"
+                    android:layout_height="41dp"
+                    android:text="Gerenciar suas notificaçoes"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="92dp"
+                    tools:layout_editor_absoluteY="34dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="374dp"
+            android:layout_height="78dp"
+            app:cardBackgroundColor="#63000000"
+            app:cardCornerRadius="20dp"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="714dp" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:srcCompat="@drawable/ic_launcher_background"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="4dp" />
+
+                <TextView
+                    android:id="@+id/textView43"
+                    android:layout_width="278dp"
+                    android:layout_height="41dp"
+                    android:text="Desconecte de sua conta"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="44dp" />
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="187dp"
+                    android:layout_height="42dp"
+                    android:text="Sair do sistema"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="86dp"
+                    tools:layout_editor_absoluteY="9dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
