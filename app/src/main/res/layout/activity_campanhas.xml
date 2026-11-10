@@ -1,257 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbarSize="26dp"
+    android:background="@color/white"
     tools:context=".Campanhas">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- CABEÇALHO -->
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="412dp"
-                android:layout_height="893dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="150dp">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="369dp"
-                    android:layout_height="326dp"
-                    app:cardBackgroundColor="#63686363"
-                    app:cardCornerRadius="20dp"
-                    tools:layout_editor_absoluteX="22dp"
-                    tools:layout_editor_absoluteY="204dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="367dp"
-                        android:layout_height="335dp">
-
-                        <Button
-                            android:id="@+id/button3"
-                            android:layout_width="210dp"
-                            android:layout_height="51dp"
-                            android:backgroundTint="#009688"
-                            android:text="Marcar lembrete"
-                            android:textColor="#000000"
-                            android:textSize="20sp"
-                            tools:layout_editor_absoluteX="78dp"
-                            tools:layout_editor_absoluteY="268dp" />
-
-                        <ImageButton
-                            android:id="@+id/imageButton7"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            app:srcCompat="@drawable/ic_launcher_background"
-                            tools:layout_editor_absoluteX="13dp"
-                            tools:layout_editor_absoluteY="211dp" />
-
-                        <TextView
-                            android:id="@+id/textView6"
-                            android:layout_width="220dp"
-                            android:layout_height="65dp"
-                            android:text="Campanha de natal"
-                            android:textColor="#FFFFFF"
-                            android:textSize="28dp"
-                            tools:layout_editor_absoluteX="16dp"
-                            tools:layout_editor_absoluteY="14dp" />
-
-                        <Button
-                            android:id="@+id/button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="#FF5722"
-                            android:text="Pendente"
-                            android:textColor="#000000"
-                            android:textSize="16sp"
-                            tools:layout_editor_absoluteX="234dp"
-                            tools:layout_editor_absoluteY="14dp" />
-
-                        <ImageButton
-                            android:id="@+id/imageButton4"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            app:srcCompat="@drawable/ic_launcher_background"
-                            tools:layout_editor_absoluteX="13dp"
-                            tools:layout_editor_absoluteY="97dp" />
-
-                        <ImageButton
-                            android:id="@+id/imageButton6"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            app:srcCompat="@drawable/ic_launcher_background"
-                            tools:layout_editor_absoluteX="13dp"
-                            tools:layout_editor_absoluteY="155dp" />
-
-                        <TextView
-                            android:id="@+id/textView7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="15 de Dezembro de 2026"
-                            android:textColor="#FFFFFF"
-                            android:textSize="24sp"
-                            tools:layout_editor_absoluteX="69dp"
-                            tools:layout_editor_absoluteY="105dp" />
-
-                        <TextView
-                            android:id="@+id/textView11"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hospital Central"
-                            android:textColor="#FFFFFF"
-                            android:textSize="24sp"
-                            tools:layout_editor_absoluteX="69dp"
-                            tools:layout_editor_absoluteY="219dp" />
-
-                        <TextView
-                            android:id="@+id/textView8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="08:00"
-                            android:textColor="#FFFFFF"
-                            android:textSize="24sp"
-                            tools:layout_editor_absoluteX="69dp"
-                            tools:layout_editor_absoluteY="163dp" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="246dp"
-                    android:layout_height="80dp"
-                    android:text="Campanhas de Doações"
-                    android:textSize="34dp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="96dp" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="94dp"
-                    android:layout_height="50dp"
+                <Button
+                    android:id="@+id/btnVoltarCampanhas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/white"
+                    android:drawableLeft="@drawable/outline_arrow_left_alt_24"
+                    android:drawablePadding="8dp"
                     android:text="Voltar"
-                    android:textSize="34dp"
-                    tools:layout_editor_absoluteX="91dp"
-                    tools:layout_editor_absoluteY="27dp" />
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
-                    android:id="@+id/imageButton"
-                    android:layout_width="67dp"
-                    android:layout_height="69dp"
-                    app:srcCompat="@drawable/ic_launcher_background"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="16dp" />
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="365dp"
-                    android:layout_height="326dp"
-                    app:cardBackgroundColor="#63686363"
-                    app:cardCornerRadius="20dp"
-                    tools:layout_editor_absoluteX="26dp"
-                    tools:layout_editor_absoluteY="562dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="367dp"
-                        android:layout_height="335dp">
-
-                        <ImageButton
-                            android:id="@+id/imageButton7"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            app:srcCompat="@drawable/ic_launcher_background"
-                            tools:layout_editor_absoluteX="13dp"
-                            tools:layout_editor_absoluteY="211dp" />
-
-                        <TextView
-                            android:id="@+id/textView6"
-                            android:layout_width="239dp"
-                            android:layout_height="81dp"
-                            android:text="Campanha de nossas senhora "
-                            android:textColor="#FFFFFF"
-                            android:textSize="28dp"
-                            tools:layout_editor_absoluteX="16dp"
-                            tools:layout_editor_absoluteY="14dp" />
-
-                        <Button
-                            android:id="@+id/button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:backgroundTint="#676A73"
-                            android:text="Encerrada"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16sp"
-                            tools:layout_editor_absoluteX="229dp"
-                            tools:layout_editor_absoluteY="14dp" />
-
-                        <Button
-                            android:id="@+id/button2"
-                            android:layout_width="210dp"
-                            android:layout_height="51dp"
-                            android:backgroundTint="#676A73"
-                            android:text="Encerrada"
-                            android:textColor="#000000"
-                            android:textSize="20sp"
-                            tools:layout_editor_absoluteX="78dp"
-                            tools:layout_editor_absoluteY="268dp" />
-
-                        <ImageButton
-                            android:id="@+id/imageButton4"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            app:srcCompat="@drawable/ic_launcher_background"
-                            tools:layout_editor_absoluteX="13dp"
-                            tools:layout_editor_absoluteY="97dp" />
-
-                        <ImageButton
-                            android:id="@+id/imageButton6"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            app:srcCompat="@drawable/ic_launcher_background"
-                            tools:layout_editor_absoluteX="13dp"
-                            tools:layout_editor_absoluteY="155dp" />
-
-                        <TextView
-                            android:id="@+id/textView7"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="4 de novembro de 2026"
-                            android:textColor="#FFFFFF"
-                            android:textSize="24sp"
-                            tools:layout_editor_absoluteX="69dp"
-                            tools:layout_editor_absoluteY="105dp" />
-
-                        <TextView
-                            android:id="@+id/textView11"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Hospital Central"
-                            android:textColor="#FFFFFF"
-                            android:textSize="24sp"
-                            tools:layout_editor_absoluteX="69dp"
-                            tools:layout_editor_absoluteY="219dp" />
-
-                        <TextView
-                            android:id="@+id/textView8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="08:00"
-                            android:textColor="#FFFFFF"
-                            android:textSize="24sp"
-                            tools:layout_editor_absoluteX="69dp"
-                            tools:layout_editor_absoluteY="163dp" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/tituloCampanhas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Campanhas de Doações"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnVoltarCampanhas" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- LISTA DINÂMICA DE CAMPANHAS -->
+
+            <LinearLayout
+                android:id="@+id/containerCampanhas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
         </LinearLayout>
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

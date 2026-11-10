@@ -11,40 +11,56 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DOEMAISUI01">
+
+        <!-- Tela inicial -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
+        <!-- Tela de campanhas -->
+        <activity
+            android:name=".Campanhas"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Dashboard do funcionário -->
         <activity
             android:name=".dashboradFuncionario"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Informações -->
         <activity
             android:name=".information"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Perfil do usuário -->
         <activity
             android:name=".meuPerfil"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Lista de voluntários -->
         <activity
             android:name=".lista_voluntarios"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Cadastro de voluntários -->
         <activity
             android:name=".cadastroDeVoluntarios"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".Questionario"
-            android:exported="false"
-            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>
