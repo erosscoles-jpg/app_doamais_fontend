@@ -5,7 +5,7 @@
     android:id="@+id/btn_cadastrar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroudColor"
+    android:background="@color/white"
     tools:context=".meuPerfil">
 
     <Button
@@ -14,15 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/backgroudColor"
+        android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/outline_arrow_left_alt_24"
         android:text="Voltar"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -36,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Meu Perfil"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView5"
@@ -50,7 +47,6 @@
         android:id="@+id/imageView5"
         android:layout_width="120dp"
         android:layout_height="120dp"
-
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/textView37"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,9 +59,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:background="@drawable/fuction_style"
+        android:background="@drawable/btn_borda_preta"
+        android:padding="10dp"
         android:text="Funcionario"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textView40"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:text="Mateus"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -109,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nome Completo"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -117,7 +114,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/fuction_style"
+            android:background="@drawable/btn_borda_preta"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingStart="10dp"
@@ -128,7 +125,7 @@
                 android:layout_height="20dp"
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/outline_account_circle_24"
-                app:tint="@color/white" />
+                app:tint="@color/black" />
 
             <TextView
                 android:layout_width="0dp"
@@ -137,7 +134,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Erminio Apaixonado de Jesus"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -147,7 +144,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -155,7 +152,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/fuction_style"
+            android:background="@drawable/btn_borda_preta"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingStart="10dp"
@@ -166,7 +163,7 @@
                 android:layout_height="20dp"
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/outline_attach_email_24"
-                app:tint="@color/white" />
+                app:tint="@color/black" />
 
             <TextView
                 android:layout_width="0dp"
@@ -175,7 +172,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="ErminioApaixonado@gmail.com"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -185,14 +182,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Telefone"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="300dp"
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/fuction_style"
+            android:background="@drawable/btn_borda_preta"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingStart="10dp"
@@ -203,7 +200,7 @@
                 android:layout_height="20dp"
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/round_call_24"
-                app:tint="@color/white" />
+                app:tint="@color/black" />
 
             <TextView
                 android:layout_width="0dp"
@@ -211,7 +208,7 @@
                 android:layout_weight="1"
                 android:maxLines="1"
                 android:text="+55 91 8540-3917"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="12sp" />
 
         </LinearLayout>
@@ -225,35 +222,43 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.76" />
 
-    <Button
+    <!-- BOTÃO NOTIFICAÇÕES -->
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button8"
         android:layout_width="300dp"
         android:layout_height="65dp"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/round_doorbell_24"
+        android:background="@drawable/btn_borda_preta"
+        app:backgroundTint="@null"
+        android:drawableStart="@drawable/round_doorbell_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="16dp"
         android:text="Notificações"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
-    <Button
+    <!-- BOTÃO SAIR DO SISTEMA -->
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button9"
         android:layout_width="300dp"
         android:layout_height="65dp"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/round_doorbell_24"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_borda_preta"
+        app:backgroundTint="@null"
+        android:drawableStart="@drawable/round_doorbell_24"
+        android:paddingStart="20dp"
+        android:paddingEnd="16dp"
         android:text="Sair do Sistema"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button8"
         app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

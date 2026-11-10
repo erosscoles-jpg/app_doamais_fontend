@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroudColor"
+    android:background="@drawable/btn_borda_preta"
     tools:context=".dashboradFuncionario">
 
     <ImageView
@@ -20,14 +20,17 @@
         app:layout_constraintVertical_bias="0.529"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <Button
+    <!-- BOTÃO USUÁRIO -->
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/btn_borda_preta"
         android:drawableLeft="@drawable/outline_account_circle_24"
+        android:padding="10dp"
         android:text="Button"
         android:textColor="@color/black"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
@@ -35,35 +38,43 @@
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
+    <!-- BOTÃO ESCANEAR QR CODE -->
+
+    <!-- BOTÃO INFORMAÇÕES -->
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_escaner"
-        android:layout_width="300dp"
+        android:layout_width="320dp"
         android:layout_height="65dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/outline_barcode_scanner_24"
+        android:background="@drawable/btn_borda_preta"
+        android:drawableStart="@drawable/outline_barcode_scanner_24"
+        android:paddingStart="24dp"
+        android:paddingEnd="16dp"
         android:text="Escanear QR Code"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:cornerRadius="10dp"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_info"
-        android:layout_width="300dp"
+        android:layout_width="320dp"
         android:layout_height="65dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/outline_chat_info_24"
+        android:background="@drawable/btn_borda_preta"
+        android:drawableStart="@drawable/outline_chat_info_24"
+        android:paddingStart="24dp"
+        android:paddingEnd="16dp"
         android:text="Informações"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:cornerRadius="10dp"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.486"
@@ -71,6 +82,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:layout_constraintVertical_bias="0.0" />
 
+    <!-- GUIDELINE 1 -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -78,6 +90,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.15321477" />
 
+    <!-- GUIDELINE 2 -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
@@ -85,42 +98,49 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.35" />
 
-    <Button
+    <!-- BOTÃO LISTA DE VOLUNTÁRIOS -->
+
+    <!-- BOTÃO CADASTRAR VOLUNTÁRIOS -->
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_lista"
-        android:layout_width="125dp"
+        android:layout_width="145dp"
         android:layout_height="200dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/btn_borda_preta"
         android:drawableTop="@drawable/outline_clinical_notes_24"
         android:padding="10dp"
         android:text="Lista de Voluntários"
         android:textColor="@color/black"
         android:textSize="19sp"
-        app:cornerRadius="10dp"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/btn_cadastrar"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_cadastrar"
-        android:layout_width="125dp"
+        android:layout_width="145dp"
         android:layout_height="200dp"
-        android:backgroundTint="@color/white"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/btn_borda_preta"
         android:drawableTop="@drawable/outline_content_paste_24"
         android:padding="10dp"
-        android:text="Cadastrar novos voluntarios"
+        android:text="Cadastrar voluntarios"
         android:textColor="@color/black"
         android:textSize="19sp"
-        app:cornerRadius="10dp"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="@+id/btn_lista"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_lista"
         app:layout_constraintTop_toTopOf="@+id/btn_lista" />
 
+    <!-- GUIDELINE 3 -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"

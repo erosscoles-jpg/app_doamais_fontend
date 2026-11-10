@@ -5,7 +5,7 @@
     android:id="@+id/btn_cadastrar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroudColor"
+    android:background="@color/white"
     tools:context=".lista_voluntarios">
 
     <!-- Botão Voltar -->
@@ -15,9 +15,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:backgroundTint="@color/backgroudColor"
+        android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/outline_arrow_left_alt_24"
         android:text="Voltar"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -187,8 +188,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/fuction_style"
         android:drawableLeft="@drawable/outline_category_search_24"
         android:ems="10"
@@ -199,9 +200,9 @@
         android:paddingBottom="12dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/guideline10"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/guideline10" />
 
     <!-- Botões de filtro com rolagem horizontal -->
     <HorizontalScrollView
@@ -232,7 +233,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:backgroundTint="@color/backgroudColor"
+                android:backgroundTint="@color/white"
                 android:minWidth="0dp"
                 android:text="Total"
                 android:textColor="@color/total"
@@ -245,7 +246,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:backgroundTint="@color/backgroudColor"
+                android:backgroundTint="@color/white"
                 android:minWidth="0dp"
                 android:text="Aptos"
                 android:textColor="@color/aprovados"
@@ -258,7 +259,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:backgroundTint="@color/backgroudColor"
+                android:backgroundTint="@color/white"
                 android:minWidth="0dp"
                 android:text="Pendentes"
                 android:textColor="@color/pendente"
@@ -271,7 +272,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:backgroundTint="@color/backgroudColor"
+                android:backgroundTint="@color/white"
                 android:minWidth="0dp"
                 android:text="Em análise"
                 android:textColor="@color/emAnalise"
@@ -284,7 +285,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:backgroundTint="@color/backgroudColor"
+                android:backgroundTint="@color/white"
                 android:minWidth="0dp"
                 android:text="Inaptos"
                 android:textColor="@color/rejeitados"

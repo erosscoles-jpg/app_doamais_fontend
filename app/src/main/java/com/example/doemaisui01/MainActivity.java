@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         entrar = findViewById(R.id.btn);
 
         entrar.setOnClickListener(v -> {
-            Intent intert = new Intent(MainActivity.this, Campanhas.class);
+            Intent intert = new Intent(MainActivity.this, dashboradFuncionario.class);
             startActivity(intert);
         });
 

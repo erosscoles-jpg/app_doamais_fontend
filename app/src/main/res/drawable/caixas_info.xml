@@ -8,7 +8,7 @@
     <!-- Grossura e cor da borda -->
     <stroke
         android:width="2dp"
-        android:color="#FFFF" /> <!-- Exemplo: Borda Laranja -->
+        android:color="@color/black"/> <!-- Exemplo: Borda Laranja -->
 
     <!-- Arredondamento dos cantos (opcional) -->
     <corners android:radius="8dp" />

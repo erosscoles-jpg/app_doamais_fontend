@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/btn_cadastrar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroudColor"
+    android:background="@color/white"
     tools:context=".cadastroDeVoluntarios">
 
     <Button
@@ -15,9 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="@color/backgroudColor"
+        android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/outline_arrow_left_alt_24"
         android:text="Voltar"
+        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Cadastrar Voluntários"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,10 +41,10 @@
         android:layout_marginTop="20dp"
         android:fillViewport="false"
         android:scrollbars="vertical"
-        app:layout_constraintTop_toBottomOf="@id/textView41"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/textView41">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,17 +58,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
                 android:text="Dados pessoais"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="19sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="14dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nome completo"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="15sp" />
 
             <EditText
@@ -81,7 +81,7 @@
                 android:inputType="textCapWords"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHint="#AAAAAA" />
 
             <!-- IDADE E TIPO SANGUÍNEO -->
@@ -101,7 +101,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Idade"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/black" />
 
                     <EditText
                         android:id="@+id/editTextNumber"
@@ -112,7 +112,7 @@
                         android:hint="Idade"
                         android:inputType="number"
                         android:paddingStart="12dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textColorHint="#AAAAAA" />
 
                 </LinearLayout>
@@ -131,7 +131,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Tipo sanguíneo"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/black" />
 
                     <Spinner
                         android:id="@+id/spTipoSanguineo"
@@ -161,7 +161,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Peso (kg)"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/black" />
 
                     <EditText
                         android:id="@+id/editTextNumber2"
@@ -172,7 +172,7 @@
                         android:hint="Ex.: 70"
                         android:inputType="numberDecimal"
                         android:paddingStart="12dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textColorHint="#AAAAAA" />
 
                 </LinearLayout>
@@ -191,7 +191,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Altura (cm)"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/black" />
 
                     <EditText
                         android:id="@+id/editTextNumber3"
@@ -202,7 +202,7 @@
                         android:hint="Ex.: 175"
                         android:inputType="number"
                         android:paddingStart="12dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textColorHint="#AAAAAA" />
 
                 </LinearLayout>
@@ -217,7 +217,7 @@
                 android:layout_marginTop="28dp"
                 android:layout_marginBottom="12dp"
                 android:text="Status e Observações"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="19sp"
                 android:textStyle="bold" />
 
@@ -225,7 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Status do Voluntário"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="15sp" />
 
             <Spinner
@@ -241,7 +241,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Observações adicionais"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="15sp" />
 
             <EditText
@@ -254,18 +254,18 @@
                 android:hint="Digite observações importantes..."
                 android:inputType="textMultiLine"
                 android:padding="12dp"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textColorHint="#AAAAAA" />
 
             <!-- QUESTIONÁRIO -->
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button12"
                 android:layout_width="350dp"
                 android:layout_height="65dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="28dp"
-                android:backgroundTint="@color/white"
-                android:text="Preencher Questionario"
+                android:background="@drawable/btn_borda_preta"
+                android:text="Enviar"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:cornerRadius="10dp" />
