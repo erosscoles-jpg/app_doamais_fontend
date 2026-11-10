@@ -8,196 +8,250 @@
     android:scrollbarSize="26dp"
     tools:context=".Campanhas">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="199dp"
-            android:layout_height="76dp"
-            android:text="Campanha de natal"
-            android:textColor="#FFFFFF"
-            android:textSize="34dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="315dp"
-            android:layout_height="77dp"
-            android:text="Data: 15 de dezembro de 2025 "
-            android:textColor="#FFFFFF"
-            android:textSize="26dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="94dp" />
-
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="130dp"
-            android:layout_height="35dp"
-            android:text="Hora:08:00"
-            android:textColor="#FFFFFF"
-            android:textSize="26dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="170dp" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="187dp"
-        android:layout_height="57dp"
-        android:text="  Criar conta"
-        android:textSize="32sp"
-        tools:ignore="MissingConstraints" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="420dp"
-        android:layout_height="103dp"
-        android:background="#FE5050"
-        android:orientation="vertical">
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="325dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="236dp"
-        android:layout_height="45dp"
-        android:text="Campanhas"
-        android:textSize="34sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="52dp" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="409dp"
-        android:layout_height="786dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="103dp">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="368dp"
-            android:layout_height="230dp"
-            app:cardBackgroundColor="#63000000"
-            app:cardCornerRadius="20dp"
-            tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="526dp" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_width="412dp"
+                android:layout_height="893dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="369dp"
+                    android:layout_height="326dp"
+                    app:cardBackgroundColor="#63686363"
+                    app:cardCornerRadius="20dp"
+                    tools:layout_editor_absoluteX="22dp"
+                    tools:layout_editor_absoluteY="204dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="367dp"
+                        android:layout_height="335dp">
+
+                        <Button
+                            android:id="@+id/button3"
+                            android:layout_width="210dp"
+                            android:layout_height="51dp"
+                            android:backgroundTint="#009688"
+                            android:text="Marcar lembrete"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            tools:layout_editor_absoluteX="78dp"
+                            tools:layout_editor_absoluteY="268dp" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton7"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_launcher_background"
+                            tools:layout_editor_absoluteX="13dp"
+                            tools:layout_editor_absoluteY="211dp" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="220dp"
+                            android:layout_height="65dp"
+                            android:text="Campanha de natal"
+                            android:textColor="#FFFFFF"
+                            android:textSize="28dp"
+                            tools:layout_editor_absoluteX="16dp"
+                            tools:layout_editor_absoluteY="14dp" />
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#FF5722"
+                            android:text="Pendente"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            tools:layout_editor_absoluteX="234dp"
+                            tools:layout_editor_absoluteY="14dp" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_launcher_background"
+                            tools:layout_editor_absoluteX="13dp"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton6"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_launcher_background"
+                            tools:layout_editor_absoluteX="13dp"
+                            tools:layout_editor_absoluteY="155dp" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15 de Dezembro de 2026"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            tools:layout_editor_absoluteX="69dp"
+                            tools:layout_editor_absoluteY="105dp" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hospital Central"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            tools:layout_editor_absoluteX="69dp"
+                            tools:layout_editor_absoluteY="219dp" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="08:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            tools:layout_editor_absoluteX="69dp"
+                            tools:layout_editor_absoluteY="163dp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/textView27"
-                    android:layout_width="336dp"
-                    android:layout_height="163dp"
-                    android:text="Tudo que voce precissa saber para doar sangue"
-                    android:textColor="#FFFFFF"
-                    android:textSize="38dp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="3dp" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="368dp"
-            android:layout_height="230dp"
-            app:cardBackgroundColor="#63000000"
-            app:cardCornerRadius="20dp"
-            tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="30dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView21"
-                    android:layout_width="199dp"
-                    android:layout_height="76dp"
-                    android:text="Campanha de natal"
-                    android:textColor="#FFFFFF"
+                    android:id="@+id/textView2"
+                    android:layout_width="246dp"
+                    android:layout_height="80dp"
+                    android:text="Campanhas de Doações"
                     android:textSize="34dp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="96dp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="94dp"
+                    android:layout_height="50dp"
+                    android:text="Voltar"
+                    android:textSize="34dp"
+                    tools:layout_editor_absoluteX="91dp"
+                    tools:layout_editor_absoluteY="27dp" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="67dp"
+                    android:layout_height="69dp"
+                    app:srcCompat="@drawable/ic_launcher_background"
                     tools:layout_editor_absoluteX="16dp"
                     tools:layout_editor_absoluteY="16dp" />
 
-                <TextView
-                    android:id="@+id/textView23"
-                    android:layout_width="315dp"
-                    android:layout_height="77dp"
-                    android:text="Data: 15 de dezembro de 2025 "
-                    android:textColor="#FFFFFF"
-                    android:textSize="26dp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="94dp" />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="365dp"
+                    android:layout_height="326dp"
+                    app:cardBackgroundColor="#63686363"
+                    app:cardCornerRadius="20dp"
+                    tools:layout_editor_absoluteX="26dp"
+                    tools:layout_editor_absoluteY="562dp">
 
-                <TextView
-                    android:id="@+id/textView24"
-                    android:layout_width="130dp"
-                    android:layout_height="35dp"
-                    android:text="Hora:08:00"
-                    android:textColor="#FFFFFF"
-                    android:textSize="26dp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="170dp" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="367dp"
+                        android:layout_height="335dp">
 
-                <TextView
-                    android:id="@+id/textView25"
-                    android:layout_width="176dp"
-                    android:layout_height="65dp"
-                    android:text="Local: Hospital Central"
-                    android:textColor="#FFFFFF"
-                    android:textSize="26dp"
-                    tools:layout_editor_absoluteX="176dp"
-                    tools:layout_editor_absoluteY="139dp" />
+                        <ImageButton
+                            android:id="@+id/imageButton7"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_launcher_background"
+                            tools:layout_editor_absoluteX="13dp"
+                            tools:layout_editor_absoluteY="211dp" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="239dp"
+                            android:layout_height="81dp"
+                            android:text="Campanha de nossas senhora "
+                            android:textColor="#FFFFFF"
+                            android:textSize="28dp"
+                            tools:layout_editor_absoluteX="16dp"
+                            tools:layout_editor_absoluteY="14dp" />
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#676A73"
+                            android:text="Encerrada"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            tools:layout_editor_absoluteX="229dp"
+                            tools:layout_editor_absoluteY="14dp" />
+
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="210dp"
+                            android:layout_height="51dp"
+                            android:backgroundTint="#676A73"
+                            android:text="Encerrada"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            tools:layout_editor_absoluteX="78dp"
+                            tools:layout_editor_absoluteY="268dp" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_launcher_background"
+                            tools:layout_editor_absoluteX="13dp"
+                            tools:layout_editor_absoluteY="97dp" />
+
+                        <ImageButton
+                            android:id="@+id/imageButton6"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:srcCompat="@drawable/ic_launcher_background"
+                            tools:layout_editor_absoluteX="13dp"
+                            tools:layout_editor_absoluteY="155dp" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 de novembro de 2026"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            tools:layout_editor_absoluteX="69dp"
+                            tools:layout_editor_absoluteY="105dp" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hospital Central"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            tools:layout_editor_absoluteX="69dp"
+                            tools:layout_editor_absoluteY="219dp" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="08:00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            tools:layout_editor_absoluteX="69dp"
+                            tools:layout_editor_absoluteY="163dp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="368dp"
-            android:layout_height="230dp"
-            app:cardBackgroundColor="#63000000"
-            app:cardCornerRadius="20dp"
-            tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="278dp" >
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/textView26"
-                    android:layout_width="336dp"
-                    android:layout_height="163dp"
-                    android:text="Minhas campanhas de doação de sangue disponiveis"
-                    android:textColor="#FFFFFF"
-                    android:textSize="38dp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="0dp" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
