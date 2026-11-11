@@ -28,7 +28,7 @@
         android:background="@drawable/btn_borda_preta"
         android:drawableLeft="@drawable/outline_account_circle_24"
         android:padding="10dp"
-        android:text="Button"
+        android:text="Usario"
         android:textColor="@color/black"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"

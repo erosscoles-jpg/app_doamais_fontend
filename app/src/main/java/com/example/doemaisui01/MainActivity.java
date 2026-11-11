@@ -11,26 +11,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button entrar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-
-        entrar = findViewById(R.id.btn);
-
-        entrar.setOnClickListener(v -> {
-            Intent intert = new Intent(MainActivity.this, dashboradFuncionario.class);
-            startActivity(intert);
-        });
-
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.btn_cadastrar), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 }
