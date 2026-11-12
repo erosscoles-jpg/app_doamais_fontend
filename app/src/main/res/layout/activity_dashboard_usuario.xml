@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".dashboardUsuario">
+
+
+    <!-- CABEÇALHO -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="355dp"
+        android:layout_height="220dp"
+        android:background="@drawable/borda_campanha"
+        android:minHeight="326dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <!-- TÍTULO -->
+        <TextView
+            android:id="@+id/txtTituloCampanha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nome da campanha"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@id/txtStatusCampanha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- STATUS -->
+        <TextView
+            android:id="@+id/txtStatusCampanha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Pendente"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- DATA -->
+        <ImageView
+            android:id="@+id/imgDataCampanha"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Data da campanha"
+            app:layout_constraintBottom_toBottomOf="@id/txtDataCampanha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtDataCampanha"
+            app:srcCompat="@drawable/baseline_calendar_month_24" />
+
+        <TextView
+            android:id="@+id/txtDataCampanha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:text="15 de Dezembro de 2026"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgDataCampanha"
+            app:layout_constraintTop_toBottomOf="@id/txtTituloCampanha" />
+
+        <!-- HORÁRIO -->
+        <ImageView
+            android:id="@+id/imgHorarioCampanha"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Horário da campanha"
+            app:layout_constraintBottom_toBottomOf="@id/txtHorarioCampanha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtHorarioCampanha"
+            app:srcCompat="@drawable/sharp_clock_loader_90_24" />
+
+        <TextView
+            android:id="@+id/txtHorarioCampanha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:text="08:00"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgHorarioCampanha"
+            app:layout_constraintTop_toBottomOf="@id/txtDataCampanha" />
+
+        <!-- LOCAL -->
+        <ImageView
+            android:id="@+id/imgLocalCampanha"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Local da campanha"
+            app:layout_constraintBottom_toBottomOf="@id/txtLocalCampanha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtLocalCampanha"
+            app:srcCompat="@drawable/sharp_add_location_24" />
+
+        <TextView
+            android:id="@+id/txtLocalCampanha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:text="Hospital Central"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgLocalCampanha"
+            app:layout_constraintTop_toBottomOf="@id/txtHorarioCampanha" />
+
+        <!-- BOTÃO DE LEMBRETE -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#D8232A"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/outline_account_circle_24"
+            android:contentDescription="Perfil do usuário"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doa +"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seu gesto salva vidas"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- CONTEÚDO -->
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline17">
+
+
+        <!-- CAMPANHAS -->
+
+
+        <!-- INFORMAÇÕES -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/btn_borda_preta"
+            android:drawableStart="@drawable/baseline_calendar_month_24"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="Campanhas"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/btn_borda_preta"
+            android:drawableStart="@drawable/outline_book_2_24"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="O que preciso saber?"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+
+        <!-- INSCRIÇÕES -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/btn_borda_preta"
+            android:drawablePadding="20dp"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="Minhas Inscrições"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroudColor"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/backgroudColor"
+            app:srcCompat="@drawable/outline_album_24" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@color/backgroudColor"
+            app:srcCompat="@drawable/baseline_house_24" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:background="@color/backgroudColor"
+            app:srcCompat="@drawable/outline_account_maior" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86593705" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

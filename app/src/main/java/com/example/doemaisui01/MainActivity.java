@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         textEsqueciSenha = findViewById(R.id.text_esqueci);
 
         btnEntrar.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, dashboradFuncionario.class);
+            Intent intent = new Intent(MainActivity.this, dashboardUsuario.class);
             startActivity(intent);
         });
 
