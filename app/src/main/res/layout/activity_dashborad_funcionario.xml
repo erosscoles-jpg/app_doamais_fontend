@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn_borda_preta"
         android:drawableLeft="@drawable/outline_account_circle_24"
+        android:drawablePadding="4dp"
         android:padding="10dp"
         android:text="Usario"
         android:textColor="@color/black"

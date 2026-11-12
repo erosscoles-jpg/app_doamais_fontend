@@ -59,10 +59,19 @@
             android:name=".cadastroDeVoluntarios"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Criar conta -->
         <activity
             android:name=".criar_conta2"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <!-- Nova senha -->
+        <activity
+            android:name=".NovaSenha"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
     </application>
 
 </manifest>
