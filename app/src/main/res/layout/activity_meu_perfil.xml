@@ -135,7 +135,7 @@
                 android:maxLines="1"
                 android:text="Erminio Apaixonado de Jesus"
                 android:textColor="@color/black"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -173,7 +173,7 @@
                 android:maxLines="1"
                 android:text="ErminioApaixonado@gmail.com"
                 android:textColor="@color/black"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -209,7 +209,7 @@
                 android:maxLines="1"
                 android:text="+55 91 8540-3917"
                 android:textColor="@color/black"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
