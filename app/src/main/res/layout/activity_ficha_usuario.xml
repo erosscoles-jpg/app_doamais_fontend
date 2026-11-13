@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ficha_usuario">
+
+    <!-- BOTÃO VOLTAR -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/outline_arrow_left_alt_24"
+        android:drawablePadding="5dp"
+        android:padding="5dp"
+        android:text="Voltar"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <!-- CONTEÚDO COM ROLAGEM -->
+    <ScrollView
+        android:id="@+id/scrollFicha"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="20dp"
+
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TÍTULO -->
+            <TextView
+                android:id="@+id/textView74"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Meus Dados"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <!-- FOTO DO USUÁRIO -->
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:contentDescription="Foto do usuário"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars"/>
+
+            <!-- NÚMERO DE INSCRIÇÃO -->
+            <TextView
+                android:id="@+id/textView73"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="N de inscrição: 48392017"
+                android:textColor="#555555"
+                android:textSize="14sp"/>
+
+
+            <!-- CARD DOS DADOS -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardDadosUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borda_campanha"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- NOME COMPLETO -->
+                    <TextView
+                        android:id="@+id/textView63"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nome Completo"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editTextText3"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/caixas_info"
+                        android:hint="Digite seu nome completo"
+                        android:inputType="textPersonName"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+
+
+                    <!-- IDADE E PESO -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="8dp">
+
+                            <TextView
+                                android:id="@+id/textView64"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Idade"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+                            <EditText
+                                android:id="@+id/editTextText4"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/caixas_info"
+                                android:hint="Idade"
+                                android:inputType="number"
+                                android:padding="10dp"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="8dp">
+
+                            <TextView
+                                android:id="@+id/textView65"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Peso (kg)"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+                            <EditText
+                                android:id="@+id/editTextText5"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/caixas_info"
+                                android:hint="Peso"
+                                android:inputType="numberDecimal"
+                                android:padding="10dp"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!-- ALTURA E TIPO SANGUÍNEO -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="8dp">
+
+                            <TextView
+                                android:id="@+id/textView66"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Altura (m)"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+                            <EditText
+                                android:id="@+id/editTextText6"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/caixas_info"
+                                android:hint="Altura"
+                                android:inputType="numberDecimal"
+                                android:padding="10dp"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="8dp">
+
+                            <TextView
+                                android:id="@+id/textView67"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tipo sanguíneo"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold"/>
+
+                            <EditText
+                                android:id="@+id/editTextText9"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/caixas_info"
+                                android:hint="Ex.: O+"
+                                android:inputType="text"
+                                android:padding="10dp"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!-- HISTÓRICO DE DOAÇÃO -->
+                    <TextView
+                        android:id="@+id/textView68"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Já doou sangue antes?"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editTextText10"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/caixas_info"
+                        android:hint="Sim ou não"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp"/>
+
+
+                    <!-- ÚLTIMA DOAÇÃO -->
+                    <TextView
+                        android:id="@+id/textView69"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Quando foi sua última doação?"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editTextText11"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/caixas_info"
+                        android:hint="DD/MM/AAAA"
+                        android:inputType="date"
+                        android:padding="10dp"
+                        android:textSize="14sp"/>
+
+
+                    <!-- REAÇÃO NA DOAÇÃO -->
+                    <TextView
+                        android:id="@+id/textView70"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Já teve alguma reação durante ou após uma doação?"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/editTextText12"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/caixas_info"
+                        android:hint="Descreva ou responda sim/não"
+                        android:inputType="text"
+                        android:padding="10dp"
+                        android:textSize="14sp"/>
+
+
+                    <!-- RESPONSÁVEL PRESENTE -->
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Possui um responsável presente"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+
+
+                    <!-- VISUALIZAR RESPOSTAS -->
+                    <TextView
+                        android:id="@+id/textView72"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Visualizar respostas"
+                        android:textColor="#D8232A"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

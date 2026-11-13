@@ -224,17 +224,17 @@
 
     <!-- BOTÃO NOTIFICAÇÕES -->
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button8"
+        android:id="@+id/btn_ficha"
         android:layout_width="300dp"
         android:layout_height="65dp"
         android:background="@drawable/btn_borda_preta"
-        app:backgroundTint="@null"
-        android:drawableStart="@drawable/round_doorbell_24"
+        android:drawableStart="@drawable/outline_clinical_not"
         android:paddingStart="20dp"
         android:paddingEnd="16dp"
-        android:text="Notificações"
+        android:text="Minha ficha"
         android:textColor="@color/black"
         android:textSize="20sp"
+        app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -258,7 +258,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ficha"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
