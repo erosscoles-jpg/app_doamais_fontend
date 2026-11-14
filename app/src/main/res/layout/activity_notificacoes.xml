@@ -30,7 +30,7 @@
 
             <!-- VOLTAR -->
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button"
+                android:id="@+id/btn_camapnhas"
                 android:layout_width="wrap_content"
                 android:layout_height="38dp"
                 android:background="@android:color/transparent"

@@ -5,10 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class ficha_usuario extends AppCompatActivity {
 
@@ -20,7 +17,7 @@ public class ficha_usuario extends AppCompatActivity {
         WindowCompat.enableEdgeToEdge(getWindow());
         setContentView(R.layout.activity_ficha_usuario);
 
-        btnVoltar = findViewById(R.id.button4);
+        btnVoltar = findViewById(R.id.btn_informativo);
 
         btnVoltar.setOnClickListener(v -> {
             Intent intent = new Intent(ficha_usuario.this, meuPerfil.class);

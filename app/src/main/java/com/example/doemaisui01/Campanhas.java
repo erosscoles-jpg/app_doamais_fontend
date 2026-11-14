@@ -18,7 +18,12 @@ public class Campanhas extends AppCompatActivity {
 
     private LinearLayout containerCampanhas;
 
+    private TextView tituloCampanhas;
+
     private ArrayList<Campanha> listaCampanhas;
+
+    // Define qual lista será apresentada
+    private String modo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,22 +33,88 @@ public class Campanhas extends AppCompatActivity {
         // Referenciando os componentes
         containerCampanhas = findViewById(R.id.containerCampanhas);
 
+        tituloCampanhas = findViewById(R.id.tituloCampanhas);
+
         Button btnVoltar = findViewById(R.id.btnVoltarCampanhas);
 
         btnVoltar.setOnClickListener(v -> finish());
+
+        // Recebendo o modo enviado pelo Dashboard
+        modo = getIntent().getStringExtra("modo");
+
+        // Caso nenhum modo seja enviado, mostra todas
+        if (modo == null) {
+            modo = "todas";
+        }
+
+        // Configurando o título
+        configurarTitulo();
 
         // Carregando as campanhas
         carregarCampanhas();
     }
 
+    // CONFIGURAR O TÍTULO CONFORME O MODO
+    private void configurarTitulo() {
+
+        if (modo.equals("inscritas")) {
+
+            tituloCampanhas.setText("Minhas Campanhas");
+
+        } else {
+
+            tituloCampanhas.setText("Campanhas de Doações");
+        }
+    }
+
     // MÉTODO PARA CARREGAR AS CAMPANHAS
     private void carregarCampanhas() {
 
+        // Busca todas as campanhas cadastradas
         listaCampanhas = DadosCampanhas.listar();
 
+        // Limpa os cards anteriores
         containerCampanhas.removeAllViews();
 
+        /*
+         * MODO TODAS:
+         * Apresenta todas as campanhas.
+         *
+         * MODO INSCRITAS:
+         * Deverá apresentar somente as campanhas
+         * em que o usuário está inscrito.
+         */
+
+        if (modo.equals("inscritas")) {
+
+            // FUTURA IMPLEMENTAÇÃO:
+            // Filtrar a lista usando os dados de inscrição do usuário.
+
+            Toast.makeText(
+                    this,
+                    "O filtro de campanhas inscritas precisa ser implementado.",
+                    Toast.LENGTH_SHORT
+            ).show();
+        }
+
+        // Verifica se existem campanhas
+        if (listaCampanhas == null || listaCampanhas.isEmpty()) {
+
+            TextView mensagem = new TextView(this);
+
+            mensagem.setText("Nenhuma campanha encontrada.");
+            mensagem.setTextSize(18);
+            mensagem.setTextColor(Color.GRAY);
+            mensagem.setPadding(0, 30, 0, 30);
+
+            containerCampanhas.addView(mensagem);
+
+            return;
+        }
+
+        // Cria os cards
         for (Campanha campanha : listaCampanhas) {
+
             adicionarCard(campanha);
         }
     }

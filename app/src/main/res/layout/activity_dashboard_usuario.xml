@@ -198,7 +198,7 @@
 
         <!-- INFORMAÇÕES -->
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/btn_camapnhas"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginBottom="18dp"
@@ -212,7 +212,7 @@
             android:textSize="20sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button4"
+            android:id="@+id/btn_informativo"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginBottom="18dp"
@@ -228,7 +228,7 @@
 
         <!-- INSCRIÇÕES -->
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button5"
+            android:id="@+id/btn_MInhas_inscrições"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:background="@drawable/btn_borda_preta"

@@ -13,7 +13,7 @@
 
     <!-- BOTÃO VOLTAR -->
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button4"
+        android:id="@+id/btn_informativo"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
         android:background="@android:color/transparent"
@@ -39,7 +39,7 @@
         android:paddingEnd="16dp"
         android:paddingBottom="20dp"
 
-        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintTop_toBottomOf="@id/btn_informativo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">

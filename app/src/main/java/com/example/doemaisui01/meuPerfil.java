@@ -34,8 +34,20 @@ public class meuPerfil extends AppCompatActivity {
             btnFichaPessoal.setVisibility(View.VISIBLE);
         }
 
-        // Botão voltar
         btnVoltar.setOnClickListener(v -> {
+            Intent intent;
+            if (isUsuario) {
+                // Retorna para o dashboard do usuário
+                intent = new Intent(meuPerfil.this, dashboardUsuario.class);
+            } else {
+                // Retorna para o dashboard do funcionário
+                intent = new Intent(meuPerfil.this, dashboradFuncionario.class);
+            }
+
+            // Evita criar várias instâncias do dashboard
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
+            startActivity(intent);
             finish();
         });
 

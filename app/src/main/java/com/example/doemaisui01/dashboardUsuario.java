@@ -2,6 +2,7 @@ package com.example.doemaisui01;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class dashboardUsuario extends AppCompatActivity {
 
     ImageButton btnHome,btnPerfil,btnConfig;
+    Button btnCampanhas, btnInformativo, btnInscricoes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,9 @@ public class dashboardUsuario extends AppCompatActivity {
         btnHome = findViewById(R.id.btn_home);
         btnConfig = findViewById(R.id.btn_config);
         btnPerfil = findViewById(R.id.btn_perfil);
+        btnCampanhas = findViewById(R.id.btn_camapnhas);
+        btnInformativo = findViewById(R.id.btn_informativo);
+        btnInscricoes = findViewById(R.id.btn_MInhas_inscrições);
 
         btnHome.setOnClickListener(v -> {
             Intent intent = new Intent(dashboardUsuario.this, dashboardUsuario.class);
@@ -39,5 +44,22 @@ public class dashboardUsuario extends AppCompatActivity {
             startActivity(intent);
         });
 
+        btnCampanhas.setOnClickListener(v -> {
+
+            Intent intent = new Intent(dashboardUsuario.this, Campanhas.class);
+            intent.putExtra("modo", "todas");
+            startActivity(intent);
+        });
+
+        btnInformativo.setOnClickListener(v -> {
+            Intent intent = new Intent(dashboardUsuario.this, information.class);
+            startActivity(intent);
+        });
+
+        btnInscricoes.setOnClickListener(v -> {
+            Intent intent = new Intent(dashboardUsuario.this, Campanhas.class);
+            intent.putExtra("modo", "inscritas");
+            startActivity(intent);
+        });
     }
 }
