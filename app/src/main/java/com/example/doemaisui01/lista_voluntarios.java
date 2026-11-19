@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +16,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.doemaisui01.api.ApiClient;
+import com.example.doemaisui01.api.ApiModels;
+import com.example.doemaisui01.api.Formatos;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class lista_voluntarios extends AppCompatActivity {
 
@@ -59,53 +68,49 @@ public class lista_voluntarios extends AppCompatActivity {
         carregarVoluntarios();
     }
 
+    // BUSCA AS FICHAS NA API (GET /donor-forms)
     private void carregarVoluntarios() {
 
         // Limpa os cartões anteriores, evitando duplicações.
         containerVoluntarios.removeAllViews();
 
-        // Lista de voluntários para testes.
-        List<Voluntario> voluntarios = new ArrayList<>();
+        ApiClient.get().listForms(null).enqueue(new Callback<List<ApiModels.DonorForm>>() {
+            @Override
+            public void onResponse(Call<List<ApiModels.DonorForm>> call,
+                                   Response<List<ApiModels.DonorForm>> resp) {
+                if (isFinishing() || isDestroyed()) return;
 
-        voluntarios.add(new Voluntario(
-                "Herminio dos Santos Apaixonado",
-                40,
-                "A+",
-                "Aprovado",
-                "48392017"
-        ));
+                if (!resp.isSuccessful() || resp.body() == null) {
+                    Toast.makeText(lista_voluntarios.this,
+                            "Erro ao carregar voluntários (" + resp.code() + ").",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-        voluntarios.add(new Voluntario(
-                "Maria da Silva",
-                25,
-                "O+",
-                "Pendente",
-                "48392018"
-        ));
+                List<Voluntario> voluntarios = new ArrayList<>();
+                for (ApiModels.DonorForm f : resp.body()) {
+                    voluntarios.add(new Voluntario(
+                            f.donorName,
+                            Formatos.idade(f.birthDate),
+                            Formatos.sangue(f.bloodType),
+                            Formatos.situacaoFicha(f.status),
+                            String.valueOf(f.donorId)
+                    ));
+                }
+                mostrarVoluntarios(voluntarios);
+            }
 
-        voluntarios.add(new Voluntario(
-                "João Oliveira",
-                32,
-                "B-",
-                "Inapto",
-                "48392019"
-        ));
+            @Override
+            public void onFailure(Call<List<ApiModels.DonorForm>> call, Throwable t) {
+                if (isFinishing() || isDestroyed()) return;
+                Toast.makeText(lista_voluntarios.this, "Sem conexão com o servidor.",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
-        voluntarios.add(new Voluntario(
-                "Ana Costa",
-                28,
-                "AB+",
-                "Aprovado",
-                "48392020"
-        ));
-
-        voluntarios.add(new Voluntario(
-                "Pedro Santos",
-                35,
-                "O-",
-                "Pendente",
-                "48392021"
-        ));
+    // Monta os cartões na tela
+    private void mostrarVoluntarios(List<Voluntario> voluntarios) {
 
         // Cria um cartão para cada voluntário.
         for (Voluntario voluntario : voluntarios) {

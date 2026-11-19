@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/btn_borda_preta"
     tools:context=".dashboradFuncionario">
 
+    <!-- IMAGEM DO CABEÇALHO -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="55dp"
@@ -39,35 +40,173 @@
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="1.0" />
 
-    <!-- BOTÃO ESCANEAR QR CODE -->
+    <!-- ÁREA CENTRAL COM ROLAGEM -->
+    <ScrollView
+        android:id="@+id/scrollDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="false"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintBottom_toTopOf="@id/btn_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingBottom="16dp">
+
+            <!-- CARD DE CAMPANHAS EXPANSÍVEL -->
+            <LinearLayout
+                android:id="@+id/cardCampanhasVinculadas"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/btn_borda_preta"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- CABEÇALHO DO CARD -->
+                <LinearLayout
+                    android:id="@+id/headerCampanhas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="90dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="CAMPANHAS VINCULADAS"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtNomeCampanhaVinculada"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Nenhuma campanha selecionada"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtDataCampanhaVinculada"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Selecione uma campanha"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <!-- INDICADOR DE EXPANSÃO -->
+                    <TextView
+                        android:id="@+id/txtIndicadorCampanhas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="▼"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <!-- LISTA DAS OUTRAS CAMPANHAS -->
+                <LinearLayout
+                    android:id="@+id/containerCampanhasVinculadas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:paddingTop="8dp" />
+
+            </LinearLayout>
+
+            <!-- BOTÃO ESCANEAR QR CODE -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_escaner"
+                android:layout_width="320dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/btn_borda_preta"
+                android:drawableStart="@drawable/outline_barcode_scanner_24"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:text="Escanear QR Code"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:backgroundTint="@null" />
+
+            <!-- BOTÕES DE VOLUNTÁRIOS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- LISTA DE VOLUNTÁRIOS -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_lista"
+                    android:layout_width="145dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/btn_borda_preta"
+                    android:drawableTop="@drawable/outline_clinical_notes_24"
+                    android:padding="10dp"
+                    android:text="Lista de Voluntários"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    app:backgroundTint="@null" />
+
+                <!-- CADASTRAR VOLUNTÁRIOS -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_cadastrar"
+                    android:layout_width="145dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/btn_borda_preta"
+                    android:drawableTop="@drawable/outline_content_paste_24"
+                    android:padding="10dp"
+                    android:text="Cadastrar voluntarios"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    app:backgroundTint="@null" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <!-- BOTÃO INFORMAÇÕES -->
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_escaner"
-        android:layout_width="320dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btn_borda_preta"
-        android:drawableStart="@drawable/outline_barcode_scanner_24"
-        android:paddingStart="24dp"
-        android:paddingEnd="16dp"
-        android:text="Escanear QR Code"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.527"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="1.0" />
-
+    <!-- GUIDELINE 1 -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_info"
         android:layout_width="320dp"
         android:layout_height="65dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/btn_borda_preta"
         android:drawableStart="@drawable/outline_chat_info_24"
         android:paddingStart="24dp"
@@ -78,12 +217,9 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- GUIDELINE 1 -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -91,7 +227,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.15321477" />
 
-    <!-- GUIDELINE 2 -->
+    <!-- GUIDELINE 2 - MANTIDA -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
@@ -99,49 +235,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.35" />
 
-    <!-- BOTÃO LISTA DE VOLUNTÁRIOS -->
-
-    <!-- BOTÃO CADASTRAR VOLUNTÁRIOS -->
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_lista"
-        android:layout_width="145dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/btn_borda_preta"
-        android:drawableTop="@drawable/outline_clinical_notes_24"
-        android:padding="10dp"
-        android:text="Lista de Voluntários"
-        android:textColor="@color/black"
-        android:textSize="19sp"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
-        app:layout_constraintEnd_toStartOf="@+id/btn_cadastrar"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_cadastrar"
-        android:layout_width="145dp"
-        android:layout_height="200dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/btn_borda_preta"
-        android:drawableTop="@drawable/outline_content_paste_24"
-        android:padding="10dp"
-        android:text="Cadastrar voluntarios"
-        android:textColor="@color/black"
-        android:textSize="19sp"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_lista"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_lista"
-        app:layout_constraintTop_toTopOf="@+id/btn_lista" />
-
-    <!-- GUIDELINE 3 -->
+    <!-- GUIDELINE 3 - MANTIDA -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"

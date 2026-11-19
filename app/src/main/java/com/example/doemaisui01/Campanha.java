@@ -7,6 +7,7 @@ public class Campanha {
     private String horario;
     private String local;
     private String status;
+    private long id; // id da campanha na API
 
     public Campanha(String titulo, String data, String horario,
                     String local, String status) {
@@ -36,5 +37,13 @@ public class Campanha {
 
     public String getStatus() {
         return status;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }
