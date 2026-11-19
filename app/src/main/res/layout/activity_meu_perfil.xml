@@ -52,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/icon_perfil" />
+        app:srcCompat="@drawable/icon_perfil" />
 
     <TextView
         android:id="@+id/textView37"
@@ -61,7 +61,7 @@
         android:layout_marginBottom="12dp"
         android:background="@drawable/btn_borda_preta"
         android:padding="10dp"
-        android:text="Funcionario"
+        android:text="Funcionário"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textView40"
@@ -74,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Mateus"
+        android:text=""
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -111,7 +111,7 @@
 
         <LinearLayout
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="36dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/btn_borda_preta"
@@ -128,12 +128,12 @@
                 app:tint="@color/black" />
 
             <TextView
+                android:id="@+id/tvNomeCompletoPerfil"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Erminio Apaixonado de Jesus"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -149,9 +149,8 @@
 
         <LinearLayout
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="36dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="20dp"
             android:background="@drawable/btn_borda_preta"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -166,48 +165,12 @@
                 app:tint="@color/black" />
 
             <TextView
+                android:id="@+id/tvEmailPerfil"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="ErminioApaixonado@gmail.com"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-
-        <!-- Telefone -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Telefone"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
-
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/btn_borda_preta"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/round_call_24"
-                app:tint="@color/black" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:maxLines="1"
-                android:text="+55 91 8540-3917"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -222,7 +185,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.76" />
 
-    <!-- BOTÃO NOTIFICAÇÕES -->
+    <!-- BOTÃO MINHA FICHA -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_ficha"
         android:layout_width="300dp"
@@ -247,13 +210,13 @@
         android:layout_height="65dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/btn_borda_preta"
-        app:backgroundTint="@null"
         android:drawableStart="@drawable/round_doorbell_24"
         android:paddingStart="20dp"
         android:paddingEnd="16dp"
         android:text="Sair do Sistema"
         android:textColor="@color/black"
         android:textSize="20sp"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

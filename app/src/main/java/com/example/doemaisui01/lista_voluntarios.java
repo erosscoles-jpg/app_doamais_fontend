@@ -30,6 +30,7 @@ import retrofit2.Response;
 public class lista_voluntarios extends AppCompatActivity {
 
     private LinearLayout containerVoluntarios;
+    private boolean primeiraCargaConcluida = false;
     Button btnVoltar;
 
     @Override
@@ -68,6 +69,14 @@ public class lista_voluntarios extends AppCompatActivity {
         carregarVoluntarios();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (primeiraCargaConcluida && containerVoluntarios != null) {
+            carregarVoluntarios();
+        }
+    }
+
     // BUSCA AS FICHAS NA API (GET /donor-forms)
     private void carregarVoluntarios() {
 
@@ -89,14 +98,17 @@ public class lista_voluntarios extends AppCompatActivity {
 
                 List<Voluntario> voluntarios = new ArrayList<>();
                 for (ApiModels.DonorForm f : resp.body()) {
+                    long id = f.donorId != null ? f.donorId : -1L;
                     voluntarios.add(new Voluntario(
+                            id,
                             f.donorName,
                             Formatos.idade(f.birthDate),
                             Formatos.sangue(f.bloodType),
                             Formatos.situacaoFicha(f.status),
-                            String.valueOf(f.donorId)
+                            String.valueOf(id)
                     ));
                 }
+                primeiraCargaConcluida = true;
                 mostrarVoluntarios(voluntarios);
             }
 
@@ -170,6 +182,18 @@ public class lista_voluntarios extends AppCompatActivity {
                     break;
             }
 
+            // Abre a tela de cadastro/edição ao clicar no card
+            card.setOnClickListener(v -> {
+                if (voluntario.donorId <= 0) return;
+                Intent intent = new Intent(lista_voluntarios.this, cadastroDeVoluntarios.class);
+                intent.putExtra("donorId", voluntario.donorId);
+                intent.putExtra("nome", voluntario.nome);
+                intent.putExtra("idade", voluntario.idade);
+                intent.putExtra("tipoSanguineo", voluntario.tipoSanguineo);
+                intent.putExtra("situacao", voluntario.situacao);
+                startActivity(intent);
+            });
+
             // Adiciona o cartão à lista.
             containerVoluntarios.addView(card);
         }
@@ -178,6 +202,7 @@ public class lista_voluntarios extends AppCompatActivity {
     // Modelo que representa um voluntário.
     private static class Voluntario {
 
+        long donorId;
         String nome;
         int idade;
         String tipoSanguineo;
@@ -185,12 +210,14 @@ public class lista_voluntarios extends AppCompatActivity {
         String inscricao;
 
         public Voluntario(
+                long donorId,
                 String nome,
                 int idade,
                 String tipoSanguineo,
                 String situacao,
                 String inscricao
         ) {
+            this.donorId = donorId;
             this.nome = nome;
             this.idade = idade;
             this.tipoSanguineo = tipoSanguineo;
